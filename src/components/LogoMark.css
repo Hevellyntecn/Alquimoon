@@ -1,0 +1,7 @@
+.logoMoonOnLight {
+  color: var(--ink);
+}
+
+.logoMoonOnDark {
+  color: var(--cream);
+}

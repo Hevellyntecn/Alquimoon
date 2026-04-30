@@ -1,26 +1,257 @@
 @import "tailwindcss";
+@import "../components/Header.css";
+@import "../components/Hero.css";
+@import "../components/Footer.css";
+@import "../components/LogoMark.css";
+@import "../components/ImageSection.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --beige: #f5ebe0;
+  --beige-mid: #ebe0d4;
+  --beige-deep: #dfd3c4;
+  --lavender: #a78bca;
+  --lavender-deep: #7c5fa3;
+  --purple-night: #3d2f4a;
+  --sage: #6b8f6e;
+  --sage-light: #9cb89e;
+  --moss: #4a6348;
+  --cream: #faf6f0;
+  --ink: #1a1520;
+  --mist: rgba(167, 139, 202, 0.12);
+  --shadow-soft: 0 18px 40px rgba(26, 21, 32, 0.12);
+  --shadow-card: 0 16px 34px rgba(26, 21, 32, 0.10);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-beige: var(--beige);
+  --color-beige-mid: var(--beige-mid);
+  --color-beige-deep: var(--beige-deep);
+  --color-lavender: var(--lavender);
+  --color-lavender-deep: var(--lavender-deep);
+  --color-purple-night: var(--purple-night);
+  --color-sage: var(--sage);
+  --color-sage-light: var(--sage-light);
+  --color-moss: var(--moss);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --font-display: var(--font-ubuntu);
+  --font-body: var(--font-ubuntu);
+  --font-header: var(--font-ubuntu);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--beige);
+  color: var(--ink);
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.font-header {
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-weight: 600;
+}
+
+.containerPage {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .containerPage {
+    padding: 0 2rem;
+  }
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 7rem 0;
+  }
+}
+
+.sectionBorderTop {
+  border-top: 1px solid rgba(167, 139, 202, 0.16);
+}
+
+.sectionHeader {
+  max-width: 42rem;
+}
+
+.sectionKicker {
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(124, 95, 163, 0.95);
+}
+
+.sectionTitle {
+  margin-top: 0.75rem;
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--purple-night);
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 2.75rem;
+  }
+}
+
+.sectionSubtitle {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(26, 21, 32, 0.76);
+}
+
+.card {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(167, 139, 202, 0.18);
+  background: rgba(250, 246, 240, 0.85);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(8px);
+}
+
+.cardInner {
+  padding: 2rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(107, 143, 110, 0.25);
+  background: rgba(107, 143, 110, 0.10);
+  padding: 0.4rem 0.75rem;
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(61, 47, 74, 0.9);
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--purple-night), var(--lavender-deep));
+  padding: 0.95rem 2.1rem;
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--cream);
+  text-decoration: none;
+  box-shadow: 0 18px 38px rgba(61, 47, 74, 0.22);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-1px);
+  filter: saturate(1.05);
+  box-shadow: 0 22px 46px rgba(61, 47, 74, 0.26);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(167, 139, 202, 0.28);
+  background: rgba(250, 246, 240, 0.75);
+  padding: 0.95rem 2.1rem;
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(61, 47, 74, 0.92);
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.btnSecondary:hover {
+  transform: translateY(-1px);
+  border-color: rgba(107, 143, 110, 0.45);
+  background: rgba(107, 143, 110, 0.10);
+}
+
+*:focus-visible {
+  outline: 3px solid rgba(167, 139, 202, 0.5);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+.dividerGlow {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(167, 139, 202, 0.35),
+    rgba(107, 143, 110, 0.25),
+    transparent
+  );
+}
+
+.bg-mystic-gradient {
+  background:
+    radial-gradient(ellipse 120% 80% at 50% -20%, var(--mist), transparent),
+    radial-gradient(ellipse 80% 50% at 100% 50%, rgba(107, 143, 110, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 0% 80%, rgba(124, 95, 163, 0.1), transparent),
+    var(--beige);
+}
+
+.grain {
+  position: relative;
+}
+.grain::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(-12px) scale(1.02);
+    opacity: 0.5;
+  }
+}
+
+.animate-drift {
+  animation: drift 12s ease-in-out infinite;
+}
+
+.animate-drift-delayed {
+  animation: drift 14s ease-in-out infinite;
+  animation-delay: -4s;
 }

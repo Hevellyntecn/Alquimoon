@@ -1,0 +1,137 @@
+.footerRoot {
+  border-top: 1px solid rgba(167, 139, 202, 0.2);
+  background: var(--purple-night);
+  color: rgba(250, 246, 240, 0.95);
+}
+
+.footerContainer {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 4rem 1.25rem;
+}
+
+.footerTopRow {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.footerBrandCol {
+  max-width: 28rem;
+}
+
+.footerLogoLink {
+  position: relative;
+  display: block;
+  height: 4rem;
+  width: min(100%, 440px);
+  flex-shrink: 0;
+  margin-bottom: 2rem;
+  transition: opacity 0.2s ease;
+}
+
+.footerLogoLink:hover {
+  opacity: 0.85;
+}
+
+.footerLogoImage {
+  object-fit: contain;
+  object-position: left;
+}
+
+.footerBrandRow {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footerLogo {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.footerBrandName {
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--cream);
+}
+
+.footerBrandText {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: rgba(250, 246, 240, 0.75);
+}
+
+.footerContactCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footerContactTitle {
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--lavender);
+}
+
+.footerContactMail {
+  color: rgba(250, 246, 240, 0.9);
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.footerContactMail:hover {
+  color: var(--sage-light);
+  text-decoration: underline;
+}
+
+.footerContactNote {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(250, 246, 240, 0.6);
+}
+
+.footerBottomRow {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid rgba(250, 246, 240, 0.1);
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(250, 246, 240, 0.45);
+}
+
+.footerBackToTop {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footerBackToTop:hover {
+  color: rgba(250, 246, 240, 0.7);
+}
+
+@media (min-width: 768px) {
+  .footerContainer {
+    padding: 4rem 2rem;
+  }
+
+  .footerTopRow {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footerBottomRow {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}

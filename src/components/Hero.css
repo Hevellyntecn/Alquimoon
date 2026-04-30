@@ -1,0 +1,312 @@
+.heroSection {
+  position: relative;
+  overflow: hidden;
+  min-height: 100dvh;
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+  background:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(167, 139, 202, 0.12), transparent),
+    radial-gradient(ellipse 80% 50% at 100% 50%, rgba(107, 143, 110, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 0% 80%, rgba(124, 95, 163, 0.1), transparent),
+    var(--beige);
+}
+
+.heroSection::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.heroGlowLeft,
+.heroGlowRight {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(48px);
+}
+
+.heroGlowLeft {
+  left: -8rem;
+  top: 25%;
+  height: 24rem;
+  width: 24rem;
+  background: rgba(167, 139, 202, 0.2);
+  animation: heroDrift 12s ease-in-out infinite;
+}
+
+.heroGlowRight {
+  right: -6rem;
+  bottom: 25%;
+  height: 20rem;
+  width: 20rem;
+  background: rgba(107, 143, 110, 0.25);
+  animation: heroDrift 14s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+.heroContainer {
+  position: relative;
+  margin: 0 auto;
+  max-width: 72rem;
+  /* a bit closer to the edge, but still breathable */
+  padding-left: 1rem;
+  padding-right: 1.25rem;
+}
+
+.heroGrid {
+  display: grid;
+  gap: 4rem;
+}
+
+.heroGrid::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 8rem;
+  height: 34rem;
+  width: 34rem;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    rgba(167, 139, 202, 0.16),
+    rgba(107, 143, 110, 0.08),
+    transparent 65%
+  );
+  filter: blur(36px);
+  opacity: 0.55;
+}
+
+.heroCopyCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 40rem;
+}
+
+.heroKicker {
+  margin-bottom: 1rem;
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--lavender-deep);
+}
+
+.heroTitle {
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--purple-night);
+}
+
+.heroTitleAccent {
+  margin-top: 0.5rem;
+  display: block;
+  color: var(--lavender-deep);
+}
+
+.heroDescription {
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(26, 21, 32, 0.8);
+}
+
+.heroActions {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.heroActions .btnPrimary,
+.heroActions .btnSecondary {
+  padding: 0.75rem 3.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+}
+
+.heroQuoteWrap {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-top: 1px solid rgba(167, 139, 202, 0.2);
+  padding-top: 2rem;
+}
+
+.heroStar {
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: rgba(124, 95, 163, 0.8);
+}
+
+.heroQuote {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  font-style: italic;
+  color: rgba(26, 21, 32, 0.65);
+}
+
+.heroImageCol {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroImageFrame {
+  position: relative;
+  isolation: isolate;
+}
+
+.heroImageFrame::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -2.25rem 1.70rem 1.75rem -2.25rem;
+  border-radius: 1.25rem;
+  background: rgba(167, 139, 202, 0.34);
+  box-shadow: 0 30px 60px rgba(124, 95, 163, 0.45);
+}
+
+.heroImageGlow {
+  position: absolute;
+  inset: -2rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(167, 139, 202, 0.2), rgba(107, 143, 110, 0.15), rgba(124, 95, 163, 0.1));
+  filter: blur(28px);
+  opacity: 0.6;
+}
+
+.heroImageBorder {
+  position: absolute;
+  inset: -1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(167, 139, 202, 0.3);
+  opacity: 0.5;
+}
+
+.heroImageBox {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  width: clamp(20rem, 92vw, 38rem);
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(167, 139, 202, 0.4);
+  background: rgba(245, 235, 224, 0.5);
+  box-shadow: 0 24px 40px rgba(26, 21, 32, 0.18);
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s ease;
+}
+
+.heroImageFrame:hover .heroImage {
+  transform: scale(1.02);
+}
+
+.heroImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(61, 47, 74, 0.2), transparent, rgba(167, 139, 202, 0.1));
+  mix-blend-mode: overlay;
+}
+
+@media (min-width: 640px) {
+  .heroActions {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    padding-top: 8rem;
+  }
+
+  .heroContainer {
+    padding-left: 1.1rem;
+    padding-right: 2rem;
+  }
+
+  .heroGrid {
+    min-height: calc(100dvh - 7rem);
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    column-gap: 6.5rem;
+  }
+
+  .heroKicker {
+    font-size: 0.875rem;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .heroTitleAccent {
+    margin-top: 0.75rem;
+  }
+
+  .heroDescription {
+    font-size: 1.125rem;
+  }
+
+  .heroQuoteWrap {
+    margin-top: 4rem;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .heroImageCol {
+    margin-top: 2.25rem;
+  }
+
+  .heroImageFrame::before {
+    inset: -1rem 1rem 1rem -1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    column-gap: 7.5rem;
+  }
+
+  .heroImageCol {
+    justify-content: flex-end;
+  }
+
+  .heroImageFrame {
+    margin-left: 1.25rem;
+  }
+
+  .heroTitle {
+    font-size: 3.75rem;
+  }
+}
+
+@keyframes heroDrift {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(-12px) scale(1.02);
+    opacity: 0.5;
+  }
+}
