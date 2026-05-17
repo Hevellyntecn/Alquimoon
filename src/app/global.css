@@ -1,9 +1,9 @@
 @import "tailwindcss";
-@import "../components/header.css";
-@import "../components/hero.css";
-@import "../components/footer.css";
-@import "../components/logomark.css";
-@import "../components/imagesection.css";
+@import "../components/Header.css";
+@import "../components/Hero.css";
+@import "../components/Footer.css";
+@import "../components/LogoMark.css";
+@import "../components/ImageSection.css";
 
 :root {
   --beige: #f5ebe0;
