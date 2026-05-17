@@ -28,6 +28,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
 
+        {/* SEÇÃO: SOBRE */}
         <section
           id="sobre"
           className="section sectionBorderTop"
@@ -40,77 +41,85 @@ export default function Home() {
             <div className="sectionHeader">
               <div className="sectionKicker">Sobre</div>
               <h2 className="sectionTitle">
-                Artesanato que respeita o tempo das plantas
+                Transformando a pressa em presença
               </h2>
-              <p className="sectionSubtitle">
-                Incensos naturais, terapêuticos e ritualísticos feitos à mão —
-                com ingredientes vegetais e processos lentos, para um aroma
-                limpo e um ambiente com intenção.
+              {/* Ajustado para Arial através do padrão global e espaçamento vertical ampliado */}
+              <p className="text-1xl text-gray-500 mt-6 font-header tracking-wide">
+                pequenos rituais para voltar a si
               </p>
             </div>
             <div className="dividerGlow" style={{ marginTop: "2.75rem" }} />
 
             <div className="mt-12 grid gap-10 md:grid-cols-2 md:items-center md:gap-16">
-            <div>
-              <div className="flex flex-wrap gap-3">
-                <span className="badge">Plantas selecionadas</span>
-                <span className="badge">Secagem lenta</span>
-                <span className="badge">Sem sintéticos</span>
-              </div>
-              <p className="mt-7 leading-relaxed text-ink/80">
-                Somos uma incensária pequena e cuidadosa. Selecionamos matérias
-                primas naturais — lavanda, ervas, resinas, pólen e madeiras
-                aromáticas — e transformamo-las em bastões e cones com método
-                próprio, em lotes reduzidos.
-              </p>
-              <p className="mt-4 leading-relaxed text-ink/80">
-                O resultado é fumo limpo, aroma redondo e a sensação de que cada
-                sessão é um pequeno ritual, mesmo que seja só um minuto antes
-                de começar o dia.
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <Link href="#colecoes" className="btnPrimary">
-                  Explorar coleções
-                </Link>
-                <Link href="#ritual" className="btnSecondary">
-                  Como usar no ritual
-                </Link>
-              </div>
-            </div>
-            <div className="card">
-              <div className="cardInner">
-                <div className="font-display text-xl font-semibold text-purple-night">
-                  O que torna a Alquimoon diferente
+              <div>
+                <div className="flex flex-wrap gap-3">
+                  <span className="badge">Plantas selecionadas</span>
+                  <span className="badge">Secagem lenta</span>
+                  <span className="badge">Sem sintéticos</span>
                 </div>
-                <ul className="mt-6 space-y-4 text-ink/85">
-                  <li className="flex gap-3">
-                    <span className="mt-1 text-sage" aria-hidden>
-                      ◆
-                    </span>
-                    <span>Preparação manual, do preparado à embalagem.</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="mt-1 text-lavender-deep" aria-hidden>
-                      ◆
-                    </span>
-                    <span>Fórmulas inspiradas em plantas medicinais e aromáticas.</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="mt-1 text-moss" aria-hidden>
-                      ◆
-                    </span>
-                    <span>
-                      Paleta aromática roxa e verde: lavanda, artemísia,
-                      eucalipto, cipó.
-                    </span>
-                  </li>
-                </ul>
-                <div className="mt-8 rounded-xl border border-lavender/15 bg-beige/60 p-5 text-sm leading-relaxed text-ink/75">
-                  Ideal para: meditação, limpeza energética, foco no trabalho,
-                  leitura, yoga e autocuidado.
+                <p className="mt-7 leading-relaxed text-ink/80">
+                  A Alquimoon nasceu da vontade de transformar a pressa em presença.
+                </p>
+                <p className="mt-4 leading-relaxed text-ink/80">
+                  Em um mundo acelerado, criamos rituais simples que devolvem o essencial: respirar mais fundo, 
+                  silenciar o excesso e habitar o próprio momento.
+                </p>
+                <p className="mt-4 leading-relaxed text-ink/80">
+                  Cada alquimia é criada para transformar a atmosfera do espaço e o estado de quem o habita   
+                  — através de incensos, banhos energéticos, escalda-pés, bastões e elementos naturais que carregam intenção, 
+                  cuidado e reconexão.
+                </p>
+                <p className="mt-4 leading-relaxed text-ink/80">
+                Não se trata apenas de produtos, mas de pausas conscientes em forma de ritual.
+                 </p>
+                 <p className="mt-4 leading-relaxed text-ink/80"> 
+                 Um convite para voltar para si.
+                 </p>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <Link href="#colecoes" className="btnPrimary">
+                    Explorar coleções
+                  </Link>
+                  <Link href="#ritual" className="btnSecondary">
+                    Como usar no ritual
+                  </Link>
                 </div>
               </div>
-            </div>
+
+              <div className="card">
+                <div className="cardInner">
+                  {/* Corrigido para Arial para atuar como cabeçalho de suporte sutil */}
+                  <div className="font-header text-xl font-semibold text-purple-night">
+                    O que torna a Alquimoon diferente
+                  </div>
+                  <ul className="mt-6 space-y-4 text-ink/85">
+                    <li className="flex gap-3">
+                      <span className="mt-1 text-sage" aria-hidden>
+                        ◆
+                      </span>
+                      <span>Preparação manual, do preparado à embalagem.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="mt-1 text-lavender-deep" aria-hidden>
+                        ◆
+                      </span>
+                      <span>Fórmulas inspiradas em plantas medicinais e aromáticas.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="mt-1 text-moss" aria-hidden>
+                        ◆
+                      </span>
+                      <span>
+                        Paleta aromática roxa e verde: lavanda, artemísia,
+                        eucalipto, cipó.
+                      </span>
+                    </li>
+                  </ul>
+                  <div className="mt-8 rounded-xl border border-lavender/15 bg-beige/60 p-5 text-sm leading-relaxed text-ink/75">
+                    Ideal para: meditação, limpeza energética, foco no trabalho,
+                    leitura, yoga e autocuidado.
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="mt-16 w-full">
@@ -123,6 +132,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* SEÇÃO: COLEÇÕES */}
         <section
           id="colecoes"
           className="section sectionBorderTop"
@@ -138,6 +148,7 @@ export default function Home() {
               </p>
             </div>
             <div className="dividerGlow" style={{ marginTop: "2.75rem" }} />
+            
             <div className="mt-12 grid gap-8 md:grid-cols-3">
               {colecoes.map((c) => (
                 <article
@@ -157,9 +168,11 @@ export default function Home() {
                       opacity: 0.8,
                     }}
                   />
-                  <span className="badge" style={{ background: "rgba(167,139,202,0.10)", borderColor: "rgba(167,139,202,0.25)" }}>
-                    {c.tag}
-                  </span>
+                  <div>
+                    <span className="badge" style={{ background: "rgba(167,139,202,0.10)", borderColor: "rgba(167,139,202,0.25)" }}>
+                      {c.tag}
+                    </span>
+                  </div>
                   <h3 className="font-display mt-4 text-xl font-semibold text-purple-night">
                     {c.titulo}
                   </h3>
@@ -180,6 +193,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* SEÇÃO: RITUAL */}
         <section
           id="ritual"
           className="section sectionBorderTop"
@@ -189,7 +203,7 @@ export default function Home() {
           }}
         >
           <div className="containerPage">
-            <div className="sectionHeader" style={{ textAlign: "center", margin: "0 auto" }}>
+            <div className="sectionHeader mx-auto text-center">
               <div className="sectionKicker">Ritual</div>
               <h2 className="sectionTitle">Um gesto simples, um clima novo</h2>
               <p className="sectionSubtitle">
@@ -202,14 +216,14 @@ export default function Home() {
 
             <div className="ritualImageGallery">
               <div className="ritualImagePlaceholder">
-                🎨 Adicione uma imagem inspiradora aqui — ritual, ambiente ou moment
+                🎨 Adicione uma imagem inspiradora aqui — ritual, ambiente ou momento
               </div>
             </div>
 
             <div className="mx-auto mt-12 grid max-w-4xl gap-6 text-left md:grid-cols-3">
               <div className="card">
                 <div className="cardInner">
-                  <div className="font-display text-2xl text-lavender-deep">01</div>
+                  <div className="font-header text-2xl text-lavender-deep">01</div>
                   <div className="mt-3 font-header text-sm font-semibold text-purple-night/90">
                     Prepare o espaço
                   </div>
@@ -221,7 +235,7 @@ export default function Home() {
               </div>
               <div className="card">
                 <div className="cardInner">
-                  <div className="font-display text-2xl text-sage">02</div>
+                  <div className="font-header text-2xl text-sage">02</div>
                   <div className="mt-3 font-header text-sm font-semibold text-purple-night/90">
                     Acenda com calma
                   </div>
@@ -233,7 +247,7 @@ export default function Home() {
               </div>
               <div className="card">
                 <div className="cardInner">
-                  <div className="font-display text-2xl text-moss">03</div>
+                  <div className="font-header text-2xl text-moss">03</div>
                   <div className="mt-3 font-header text-sm font-semibold text-purple-night/90">
                     Volte para você
                   </div>
@@ -248,7 +262,8 @@ export default function Home() {
             <div className="mx-auto mt-12 max-w-4xl rounded-2xl border border-lavender/18 bg-cream/75 p-8 shadow-[0_18px_40px_rgba(26,21,32,0.08)]">
               <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
                 <div>
-                  <div className="font-display text-2xl font-semibold text-purple-night">
+                  {/* Mantido em Arial para legibilidade e conformidade de design */}
+                  <div className="font-header text-2xl font-semibold text-purple-night">
                     Quer encomendar um lote?
                   </div>
                   <p className="mt-2 text-sm leading-relaxed text-ink/75">

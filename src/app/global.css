@@ -1,9 +1,9 @@
 @import "tailwindcss";
-@import "../components/Header.css";
-@import "../components/Hero.css";
-@import "../components/Footer.css";
-@import "../components/LogoMark.css";
-@import "../components/ImageSection.css";
+@import "../components/header.css";
+@import "../components/hero.css";
+@import "../components/footer.css";
+@import "../components/logomark.css";
+@import "../components/imagesection.css";
 
 :root {
   --beige: #f5ebe0;
@@ -11,6 +11,7 @@
   --beige-deep: #dfd3c4;
   --lavender: #a78bca;
   --lavender-deep: #7c5fa3;
+  --purple-medium: #65458e;
   --purple-night: #3d2f4a;
   --sage: #6b8f6e;
   --sage-light: #9cb89e;
@@ -22,21 +23,23 @@
   --shadow-card: 0 16px 34px rgba(26, 21, 32, 0.10);
 }
 
-@theme inline {
+@theme {
   --color-beige: var(--beige);
   --color-beige-mid: var(--beige-mid);
   --color-beige-deep: var(--beige-deep);
   --color-lavender: var(--lavender);
   --color-lavender-deep: var(--lavender-deep);
+  --color-purple-medium: var(--purple-medium);
   --color-purple-night: var(--purple-night);
   --color-sage: var(--sage);
   --color-sage-light: var(--sage-light);
   --color-moss: var(--moss);
   --color-cream: var(--cream);
   --color-ink: var(--ink);
-  --font-display: var(--font-ubuntu);
-  --font-body: var(--font-ubuntu);
-  --font-header: var(--font-ubuntu);
+  
+  --font-display: var(--font-playfair);
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-header: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -46,19 +49,19 @@ html {
 body {
   background-color: var(--beige);
   color: var(--ink);
-  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .font-display {
-  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-family: var(--font-playfair), serif;
   font-weight: 700;
 }
 
 .font-header {
-  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
 
@@ -93,7 +96,6 @@ body {
 }
 
 .sectionKicker {
-  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.26em;
@@ -103,12 +105,12 @@ body {
 
 .sectionTitle {
   margin-top: 0.75rem;
-  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-family: var(--font-playfair), serif;
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.02em;
-  color: var(--purple-night);
+  color: var(--purple-medium);
 }
 
 @media (min-width: 768px) {
@@ -144,7 +146,6 @@ body {
   border: 1px solid rgba(107, 143, 110, 0.25);
   background: rgba(107, 143, 110, 0.10);
   padding: 0.4rem 0.75rem;
-  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -158,7 +159,6 @@ body {
   border-radius: 9999px;
   background: linear-gradient(135deg, var(--purple-night), var(--lavender-deep));
   padding: 0.95rem 2.1rem;
-  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -182,7 +182,6 @@ body {
   border: 1px solid rgba(167, 139, 202, 0.28);
   background: rgba(250, 246, 240, 0.75);
   padding: 0.95rem 2.1rem;
-  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -200,7 +199,6 @@ body {
 *:focus-visible {
   outline: 3px solid rgba(167, 139, 202, 0.5);
   outline-offset: 3px;
-  border-radius: 10px;
 }
 
 .dividerGlow {

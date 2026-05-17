@@ -8,27 +8,21 @@ export function Hero() {
       <div className="heroGlowRight" aria-hidden />
       <div className="heroContainer">
         <div className="heroGrid">
+          
+          {/* COLUNA DE TEXTOS */}
           <div className="heroCopyCol">
             <p className="heroKicker">
               Incensária artesanal
             </p>
             <h1 className="heroTitle">
-              Fumo que sobe devagar.
-              <span className="heroTitleAccent">
-                Intenção que fica.
-              </span>
+              Transforme pequenos momentos em rituais de presença
             </h1>
             <p className="heroDescription">
-              Na Alquimoon, cada incenso nasce do encontro entre plantas, resinas
-              naturais e o trabalho das mãos — para momentos de calma, foco e
-              ritual, sem artifícios industriais.
+              Alquimias naturais para o ambiente e para o seu estado interno — rituais simples para respirar, limpar e voltar para si.
             </p>
             <div className="heroActions">
               <Link href="#colecoes" className="btnPrimary">
-                Ver coleções
-              </Link>
-              <Link href="#sobre" className="btnSecondary">
-                A nossa alquimia vegetal
+                Explorar Alquimias
               </Link>
             </div>
             <div className="heroQuoteWrap">
@@ -42,6 +36,7 @@ export function Hero() {
             </div>
           </div>
 
+          {/* COLUNA DA IMAGEM */}
           <div className="heroImageCol">
             <div className="heroImageFrame">
               <div className="heroImageGlow" />
@@ -60,6 +55,7 @@ export function Hero() {
               <div className="heroImageRing" />
             </div>
           </div>
+
         </div>
       </div>
     </section>

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Ubuntu } from "next/font/google";
-import "./globals.css";
+import { Playfair_Display } from "next/font/google";
+import "./global.css";
 
-const ubuntu = Ubuntu({
-  variable: "--font-ubuntu",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -31,9 +31,11 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${ubuntu.variable} h-full antialiased`}
+      className={`${playfair.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-body">{children}</body>
+      <body className="min-h-full flex flex-col font-body">
+        {children}
+      </body>
     </html>
   );
 }

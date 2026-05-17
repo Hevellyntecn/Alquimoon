@@ -51,7 +51,6 @@
   position: relative;
   margin: 0 auto;
   max-width: 72rem;
-  /* a bit closer to the edge, but still breathable */
   padding-left: 1rem;
   padding-right: 1.25rem;
 }
@@ -89,8 +88,8 @@
 }
 
 .heroKicker {
-  margin-bottom: 1rem;
-  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  margin-bottom: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.35em;
@@ -99,25 +98,21 @@
 }
 
 .heroTitle {
-  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
-  font-size: 2.25rem;
-  font-weight: 600;
-  line-height: 1.1;
+  font-family: var(--font-playfair), serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--purple-night);
-}
-
-.heroTitleAccent {
-  margin-top: 0.5rem;
-  display: block;
-  color: var(--lavender-deep);
+  text-wrap: balance; /* Distribui de forma inteligente as linhas eliminando a desorganização visual */
 }
 
 .heroDescription {
-  margin-top: 2rem;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(26, 21, 32, 0.8);
+  margin-top: 1.75rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.15rem; /* Ampliado para o texto não sumir ao lado do container da imagem */
+  line-height: 1.75;
+  color: rgba(26, 21, 32, 0.85);
 }
 
 .heroActions {
@@ -127,12 +122,12 @@
   gap: 1rem;
 }
 
+/* Herança limpa dos botões sem cantos quadrados conflitantes */
 .heroActions .btnPrimary,
 .heroActions .btnSecondary {
-  padding: 0.75rem 3.5rem;
+  padding: 0.95rem 3.5rem;
   font-size: 1.05rem;
   font-weight: 700;
-  border-radius: 0.5rem;
 }
 
 .heroQuoteWrap {
@@ -145,14 +140,15 @@
 }
 
 .heroStar {
-  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 2.25rem;
   font-weight: 300;
   color: rgba(124, 95, 163, 0.8);
 }
 
 .heroQuote {
-  font-size: 0.875rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
   line-height: 1.7;
   font-style: italic;
   color: rgba(26, 21, 32, 0.65);
@@ -243,7 +239,7 @@
   }
 
   .heroGrid {
-    min-height: calc(100dvh - 7rem);
+    min-h: calc(100dvh - 7rem);
     grid-template-columns: 0.95fr 1.05fr;
     align-items: center;
     column-gap: 6.5rem;
@@ -254,21 +250,16 @@
   }
 
   .heroTitle {
-    font-size: 3rem;
-  }
-
-  .heroTitleAccent {
-    margin-top: 0.75rem;
+    font-size: 3.25rem;
   }
 
   .heroDescription {
-    font-size: 1.125rem;
+    font-size: 1.25rem; /* Destacado harmoniosamente para telas de desktop */
   }
 
   .heroQuoteWrap {
     margin-top: 4rem;
   }
-
 }
 
 @media (max-width: 767px) {
@@ -295,7 +286,7 @@
   }
 
   .heroTitle {
-    font-size: 3.75rem;
+    font-size: 4rem;
   }
 }
 
