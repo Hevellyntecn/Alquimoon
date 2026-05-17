@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { LogoMark } from "./LogoMark";
 import Image from "next/image";
 
 export function Footer() {

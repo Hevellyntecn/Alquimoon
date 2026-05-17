@@ -157,7 +157,7 @@ export default function Home() {
                 >
                   <div className="collectionImageBox">
                     <div className="collectionImagePlaceholder">
-                      Imagem do produto "{c.titulo}"
+                      Imagem do produto &quot;{c.titulo}&quot;
                     </div>
                   </div>
                   <div
